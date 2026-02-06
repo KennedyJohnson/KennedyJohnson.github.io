@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ken — Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Ken</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Hi — I'm Ken</h2>
+      <p>Software developer. I build things, learn new technologies, and share projects here.</p>
+      <p><a class="btn" href="resume.html">View Resume</a></p>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <article class="card">
+          <h4>Project One</h4>
+          <p>Short description of a project. Link to repo or page.</p>
+          <a href="#" class="small">Details</a>
+        </article>
+        <article class="card">
+          <h4>Project Two</h4>
+          <p>Another project with brief summary and tech used.</p>
+          <a href="#" class="small">Details</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/kennedy-ken-johnson/" target="_blank" rel="noopener">https://www.linkedin.com/in/kennedy-ken-johnson/</a></p>
+      <p>Connect with me on LinkedIn.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Ken — Built with plain HTML/CSS/JS</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
