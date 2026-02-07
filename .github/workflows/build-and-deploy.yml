@@ -1,28 +1,17 @@
-name: Build LaTeX and Deploy to GitHub Pages (repo root is website)
+name: Deploy site to GitHub Pages (HTML-only)
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'kenresume.tex'
       - '**'
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Compile LaTeX to PDF
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: 'kenresume.tex'
-          latexmk: true
-
-      - name: Copy PDF into site root
-        run: |
-          if [ -f kenresume.pdf ]; then cp -v kenresume.pdf kenresume.pdf; else echo "kenresume.pdf not found"; fi
 
       - name: Sync site to docs/ for Pages from main:/docs
         env:
@@ -31,7 +20,7 @@ jobs:
           set -e
           rm -rf docs || true
           mkdir -p docs
-          cp -r * docs/
+          cp -r ./* docs/
           cd docs
           git init
           git config user.name "github-actions[bot]"
@@ -42,5 +31,5 @@ jobs:
 
       - name: Note about Pages
         run: |
-          echo "The workflow copied site files into the repository 'docs/' folder on the 'main' branch."
+          echo "This workflow deploys static site files to the 'docs/' folder on the 'main' branch."
           echo "In your repository settings -> Pages, set Source to branch 'main' and folder '/docs'."
