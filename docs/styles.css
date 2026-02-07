@@ -1,19 +1,14 @@
 :root{
-  --bg: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --card: #f8fafc;
-}
-:root.dark{
-  --bg: #0b1220;
+  --bg: #05173b;
   --text: #e6eef8;
   --muted: #9aa6b2;
   --accent: #60a5fa;
   --card: #071226;
 }
+
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -21,18 +16,83 @@ body{
   color:var(--text);
   -webkit-font-smoothing:antialiased;
 }
+
 .container{max-width:900px;margin:0 auto;padding:1.25rem}
-.site-header{border-bottom:1px solid rgba(0,0,0,0.06);}
+
+.site-header{border-bottom:1px solid rgba(255,255,255,0.06);}
+
 .site-title{margin:0;display:inline-block}
+
 .nav{float:right}
-.nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+
+.nav a{
+  margin-left:1rem;
+  padding:0.5rem 1rem;
+  background:var(--accent);
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  display:inline-block;
+  transition:opacity 0.2s;
+}
+
+.nav a:hover{opacity:0.8}
+
 .nav button{margin-left:1rem;background:none;border:0;cursor:pointer}
-.hero{padding:2rem 0}
+
+.hero{
+  padding:2rem 0;
+  text-align:center;
+}
+
+.hero h2{margin-bottom:0.5rem}
+
+.hero p{margin:0.5rem 0}
+
 .btn{display:inline-block;padding:.5rem 1rem;background:var(--accent);color:white;border-radius:6px;text-decoration:none}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 1px 0 rgba(0,0,0,0.04)}
+
+#projects{
+  text-align:center;
+  margin:3rem 0;
+}
+
+#projects h2{
+  font-size:2.2rem;
+  margin-bottom:2rem;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+  max-width:1200px;
+  margin:2rem auto;
+}
+
+.card{
+  background:var(--card);
+  padding:1.5rem;
+  border-radius:8px;
+  box-shadow:0 1px 0 rgba(255,255,255,0.04);
+  text-align:left;
+}
+
 .small{color:var(--accent);text-decoration:none}
-.site-footer{border-top:1px solid rgba(0,0,0,0.06);padding:1rem;margin-top:2rem;text-align:center;color:var(--muted)}
+
+.cta-section{
+  text-align:center;
+  margin:3rem 0;
+}
+
+.cta-section p{margin:0.5rem 0}
+
+.site-footer{
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding:1rem;
+  margin-top:2rem;
+  text-align:center;
+  color:var(--muted);
+}
 
 @media (max-width:640px){
   .nav{float:none;margin-top:.5rem}

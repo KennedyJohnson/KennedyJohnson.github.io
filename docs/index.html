@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ken — Personal Website</title>
+  <title>Ken — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,45 +11,52 @@
     <div class="container">
       <h1 class="site-title">Ken</h1>
       <nav class="nav">
-        <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+        <a href="resume.html">View Resume</a>
+        <a href="https://github.com/KennedyJohnson" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kennedy-ken-johnson/" target="_blank" rel="noopener">LinkedIn</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="hero">
-      <h2>Hi - I'm Ken</h2>
-      <p>Data Engineer.</p>
-      <p><a class="btn" href="resume.html">View Resume</a></p>
-    </section>
+
 
     <section id="projects">
-      <h3>Projects</h3>
+      <h2>Projects</h2>
+      
       <div class="projects-grid">
         <article class="card">
-          <h3>Gopher Metro</h3>
-          <p>Campus transportation web app integrating live bus data and route optimization.</p>
-          <p><strong>Tech:</strong> JavaScript, Python, APIs</p>
-          <p><a href="#" class="small">GitHub: add link</a></p>
+          <h3><a href="https://gopher-bus-x-metro-buses.vercel.app/" class="small">Gopher Metro</a></h3>
+          <p>University of Minnesota Campus transportation web app integrating live bus data and route optimization between University buses and city buses.<a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small"> Github Repo</a></p>
+          <p><strong>Tech:</strong> React, Node.js, Transit APIs</p>
+          <p><a href="https://www.socialcoding.net/projects/GopherBusXTransit" class="small">Informational Link</a></p>
         </article>
 
         <article class="card">
-          <h3>Model Monitoring Infrastructure</h3>
-          <p>Automated monitoring pipelines for ML models using Snowflake, SQL, and Python.</p>
-          <p><strong>Tech:</strong> Snowflake, Python, AWS</p>
-          <p><a href="#" class="small">GitHub: add link</a></p>
+          <h3><a href="https://minneanalytics.org/minnemudac2023/" class="small">MinneMUDAC 2023</a> First Place Finisher</h3>
+          <p>Analysis of baseball attendance data and predictions of upcoming season.<a href="https://github.com/jroge29/minnemudac" class="small"> GitHub Repo</a> </p>
+          <p><strong>Tech:</strong> Python, R, Twins Baseball Data</p>
+          <p><a href="https://docs.google.com/presentation/d/1N3DUGuBiaQd7nGVwIjNvpitZ4iq-M1bA/edit?usp=sharing&ouid=106221420029080544349&rtpof=true&sd=true" class="small">Project Slides</a></p>
+        </article>
+          <article class="card">
+          <h3>Comparison of Recommender Algorithms through <a href="https://grouplens.org/datasets/movielens/" class="small">MovieLens Data</a></h3>
+          <p>Comparison of collaborative filtering and content-based filtering algorithms using MovieLens dataset.<a href="https://github.com/KennedyJohnson/DSCI-4093" class="small"> GitHub Repo</a></p>
+          <p><strong>Tech:</strong> Python, R, MovieLens Data</p>
+          <p><a href="https://docs.google.com/presentation/d/12r9hm2_xb_SMJtAkqbd7P5PWmwWHijX8hM12-uknQcM/edit?slide=id.p#slide=id.p" class="small">Project Slides</a></p>
         </article>
       </div>
     </section>
 
-    <p><a class="btn" href="https://www.linkedin.com/in/kennedy-ken-johnson/" target="_blank" rel="noopener">LinkedIn</a></p>
+        <section class="hero">
+      <h2>About me</h2>
+      <p>Data Engineer at Travelers Insurance, pursuing a masters in Data Science. </p>
+      <p>Interested in data science and machine learning. </p>
+    </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Ken</div>
+    <div class="container">© 2026 Ken</div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
