@@ -1,3 +1,2 @@
 
-Link to website: [kennedyjohnson.github.io/personalWebsite 
-](https://kennedyjohnson.github.io)
+Link to website: [kennedyjohnson.github.io](https://kennedyjohnson.github.io)
