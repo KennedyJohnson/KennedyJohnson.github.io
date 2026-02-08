@@ -1,9 +1,9 @@
 :root{
-  --bg: #05173b;
-  --text: #e6eef8;
+  --bg: #ffffff;
+  --text: #000000;
   --muted: #9aa6b2;
   --accent: #60a5fa;
-  --card: #071226;
+  --card: #1a1a2e;
 }
 
 *{box-sizing:border-box}
@@ -105,14 +105,17 @@ body{
   border-radius:8px;
   box-shadow:0 1px 0 rgba(255,255,255,0.04);
   text-align:left;
+  color:white;
 }
 
 .card h3{
   margin-top:0;
+  color:white;
 }
 
 .card p{
   margin:0.75rem 0;
+  color:white;
 }
 
 .small{
