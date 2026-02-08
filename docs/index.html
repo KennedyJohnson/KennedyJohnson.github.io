@@ -9,7 +9,7 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <h1 class="site-title">Ken</h1>
+      <h1 class="site-title"><a href="index.html" style="text-decoration: none; color: inherit;">Ken</a></h1>
       <nav class="nav">
         <a href="resume.html">View Resume</a>
         <a href="https://github.com/KennedyJohnson" target="_blank" rel="noopener">GitHub</a>
@@ -20,65 +20,92 @@
 
   <main class="container">
 
+    <section class="hero">
+      <div class="about-container">
+        <div class="about-text">
+          <h1 class="headline">Ken Johnson</h1>
+          <p class="subtitle">Data Engineer at Travelers Insurance</p>
+          <p>Passionate about building scalable data systems and solving complex problems with machine learning. Currently pursuing a Master's in Data Science.</p>
+          <div style="margin-top: 1.5rem;">
+            <a href="resume.html" class="btn btn-primary">View Resume</a>
+          </div>
+        </div>
+        <img src="headshot.jpg" alt="Ken" class="profile-pic">
+      </div>
+    </section>
+
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Featured Projects</h2>
       
       <div class="projects-grid">
-
-
-        <article class="card">
-          <h3><a href="https://minneanalytics.org/minnemudac2023/" class="small">MinneMUDAC 2023</a> First Place Finisher</h3>
+        <article class="card featured-card">
+          <div class="badge">🏆 Award Winner</div>
+          <h3><a href="https://minneanalytics.org/minnemudac2023/" class="small">MinneMUDAC 2023 — First Place</a></h3>
           <p>Analysis of baseball attendance data and predictions of upcoming season attendance. Won undergraduate first place award after presenting to statisticians and baseball executives.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">R</span>
+            <span class="tech-tag">Data Analysis</span>
+          </div>
           <p class="links">
             <a href="https://github.com/jroge29/minnemudac" class="small">GitHub Repo</a>
             <a href="https://docs.google.com/presentation/d/1N3DUGuBiaQd7nGVwIjNvpitZ4iq-M1bA/edit?usp=sharing&ouid=106221420029080544349&rtpof=true&sd=true" class="small">Project Slides</a>
           </p>
-          <p><strong>Tech:</strong> Python, R, Twins Baseball Data</p>
-        </article>
-        
-        <article class="card">
-          <h3>Comparison of Recommender Algorithms through <a href="https://grouplens.org/datasets/movielens/" class="small">MovieLens Data</a></h3>
-          <p>Comparison of collaborative filtering and content-based filtering algorithms using MovieLens dataset. Evaluated RMSE and MAE of various algorithms on differing sizes of datasets.</p>
-          <p class="links">
-            <a href="https://github.com/KennedyJohnson/DSCI-4093" class="small">GitHub Repo</a>
-            <a href="https://docs.google.com/presentation/d/12r9hm2_xb_SMJtAkqbd7P5PWmwWHijX8hM12-uknQcM/edit?slide=id.p#slide=id.p" class="small">Project Slides</a>
-          </p>
-          <p><strong>Tech:</strong> Python, R, MovieLens Data</p>
         </article>
 
-        <article class="card">
-          <h3>Technical Support Chatbot - Travelers Insurance</h3>
-          <p>Created a chatbot in Databricks to answer technical questions relating to access, debugging, infrastructure, cloud and on-prem environments. The chatbot has continually updated knowledge base consisting of multiple vector search index tools.</p>
-          <p><strong>Tech:</strong> Databricks, RAG, Vector Search, GenAI, Spark </p>
-        </article>
-
-        <article class="card">
+        <article class="card featured-card">
+          <div class="badge">Production</div>
           <h3><a href="https://gopher-bus-x-metro-buses.vercel.app/" class="small">Gopher Metro</a></h3>
           <p>University of Minnesota Campus transportation web app integrating live bus data and route optimization between University buses and city buses in the Twin Cities.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">APIs</span>
+          </div>
           <p class="links">
             <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small">GitHub Repo</a>
-            <a href="https://www.socialcoding.net/projects/GopherBusXTransit" class="small">Informational Link</a>
+            <a href="https://www.socialcoding.net/projects/GopherBusXTransit" class="small">Learn More</a>
           </p>
-          <p><strong>Tech:</strong> React, Node.js, Transit APIs</p>
+        </article>
+
+        <article class="card">
+          <div class="badge">📊 Data Science</div>
+          <h3>Comparison of Recommender Algorithms</h3>
+          <p>Comprehensive comparison of collaborative filtering and content-based filtering algorithms using MovieLens dataset. Evaluated RMSE and MAE across various algorithms on differing dataset sizes.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">R</span>
+            <span class="tech-tag">ML</span>
+          </div>
+          <p class="links">
+            <a href="https://github.com/KennedyJohnson/DSCI-4093" class="small">GitHub Repo</a>
+            <a href="https://docs.google.com/presentation/d/12r9hm2_xb_SMJtAkqbd7P5PWmwWHijX8hM12-uknQcM/edit?slide=id.p#slide=id.p" class="small">Slides</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="badge">Professional</div>
+          <h3>Technical Support Chatbot</h3>
+          <p>Built a RAG-powered chatbot in Databricks for Travelers Insurance to answer technical questions on access, debugging, infrastructure, and cloud/on-premise environments. Features a continually updated knowledge base with vector search capabilities.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Databricks</span>
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">Vector Search</span>
+            <span class="tech-tag">GenAI</span>
+          </div>
         </article>
         
         <article class="card">
+          <div class="badge">📊 Data Science</div>
           <h3>Heart Failure Survival Analysis</h3>
-          <p>Using heart failure patient data, we identified ejection fraction and serum creatinine as strong predictors of mortality while finding creatinine phosphokinase to be counterproductive for classification. Dimensionality reduction via PCA and MDS revealed linearly separable patterns in patient sex and survival outcomes, with potential for improvement through larger datasets and additional machine learning methods.</p>
-          <p class="links"><a href="https://docs.google.com/document/d/1MlU3HoLOqyXbxS0vg77Nn-Q2pHPpHm0d/edit?usp=sharing&ouid=106221420029080544349&rtpof=true&sd=true" class="small" target="_blank" rel="noopener">View details</a></p>
-          <p><strong>Tech:</strong> Python, PCA, MDS, Classification</p>
+          <p>Statistical analysis of heart failure patient data identifying key predictors of mortality. Applied dimensionality reduction techniques (PCA, MDS) to reveal patterns in patient outcomes with insights for improved classification methods.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">PCA</span>
+            <span class="tech-tag">Classification</span>
+          </div>
+          <p class="links"><a href="https://docs.google.com/document/d/1MlU3HoLOqyXbxS0vg77Nn-Q2pHPpHm0d/edit?usp=sharing&ouid=106221420029080544349&rtpof=true&sd=true" class="small" target="_blank" rel="noopener">View Details</a></p>
         </article>
-      </div>
-    </section>
-
-    <section class="hero">
-      <div class="about-container">
-        <img src="headshot.jpg" alt="Ken" class="profile-pic">
-        <div class="about-text">
-          <h2>About me</h2>
-          <p>Data Engineer at Travelers Insurance, pursuing a masters in Data Science.</p>
-          <p>Interested in data science and machine learning.</p>
-        </div>
       </div>
     </section>
 
