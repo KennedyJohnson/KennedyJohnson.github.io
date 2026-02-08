@@ -110,7 +110,20 @@ body{
 
 .card h3{
   margin-top:0;
+  margin-bottom:0.5rem;
   color:rgb(0, 0, 0);
+  position:relative;
+  padding-bottom:0.25rem;
+}
+
+.card h3::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:3px;
+  background:var(--accent);
+  border-radius:2px;
+  margin-top:6px;
 }
 
 .card p{
