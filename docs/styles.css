@@ -8,6 +8,10 @@
   --border: #2e2e2e;
 }
 
+#projects > .card{
+  margin-bottom:2rem;
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 
