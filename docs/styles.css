@@ -178,6 +178,12 @@ body{
   color:var(--text);
 }
 
+.card h3 .year{
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--muted, #6b7280);
+}
+
 .card p{
   margin:1rem 0;
   color:var(--muted);
