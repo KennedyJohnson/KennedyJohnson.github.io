@@ -23,7 +23,6 @@ body{
   color:var(--text);
   -webkit-font-smoothing:antialiased;
   line-height:1.6;
-  letter-spacing:0.3px;
 }
 
 .container{max-width:900px;margin:0 auto;padding:1.25rem}
@@ -50,21 +49,17 @@ body{
 }
 
 .nav a{
-  padding:0.5rem 1rem;
-  background:var(--accent);
-  color:white;
-  border-radius:6px;
+  padding:0.25rem 0;
+  color:var(--text);
   text-decoration:none;
-  transition:all 0.2s ease;
+  transition:color 0.2s ease;
   font-size:0.95rem;
   font-weight:500;
 }
 
 .nav a:hover{
-  transform:translateY(-1px);
-  box-shadow:0 4px 12px rgba(59, 130, 246, 0.25);
+  color:var(--accent);
   text-decoration:underline;
-  text-decoration-thickness:1.5px;
   text-underline-offset:3px;
 }
 
@@ -99,7 +94,6 @@ body{
   color:var(--accent);
   font-weight:600;
   margin:0 0 1rem 0;
-  white-space:nowrap;
 }
 
 .hero p{
@@ -146,25 +140,27 @@ body{
   border:1px solid var(--border);
   text-align:left;
   color:var(--text);
-  transition:all 0.3s ease;
+  transition:border-color 0.2s ease;
   position:relative;
 }
 
 .card:hover{
   border-color:var(--accent);
-  box-shadow:0 10px 30px rgba(59, 130, 246, 0.1);
-  transform:translateY(-4px);
+}
+
+.card.featured{
+  grid-column:1 / -1;
 }
 
 .featured-badge{
   display:inline-block;
-  background:rgba(245, 158, 11, 0.12);
-  color:var(--accent2);
-  padding:0.3rem 0.75rem;
-  border-radius:16px;
+  background:transparent;
+  color:var(--muted);
+  padding:0;
+  border-radius:0;
   font-size:0.75rem;
   font-weight:700;
-  letter-spacing:0.4px;
+  letter-spacing:0.6px;
   text-transform:uppercase;
   margin-bottom:1rem;
 }
@@ -200,8 +196,8 @@ body{
 
 .tech-tag{
   display:inline-block;
-  background:rgba(59, 130, 246, 0.1);
-  color:var(--accent);
+  background:var(--border);
+  color:var(--muted);
   padding:0.35rem 0.75rem;
   border-radius:16px;
   font-size:0.8rem;
@@ -229,26 +225,18 @@ body{
 }
 
 .links a{
-  color:white;
+  color:var(--accent);
   text-decoration:none;
   font-size:0.9rem;
   font-weight:600;
-  padding:0.5rem 0.9rem;
-  background:var(--accent);
-  border-radius:6px;
-  transition:all 0.2s ease;
+  padding:0.4rem 0;
+  border-bottom:2px solid var(--accent);
+  transition:color 0.2s ease;
   display:inline-block;
-  border:2px solid var(--accent);
-  box-shadow:0 2px 8px rgba(59, 130, 246, 0.2);
 }
 
 .links a:hover{
-  border-color:var(--accent-dark);
-  transform:translateY(-2px);
-  color:#ffffff;
-  text-decoration:underline;
-  text-decoration-thickness:1.5px;
-  text-underline-offset:3px;
+  color:var(--accent-dark);
 }
 
 .site-footer{
