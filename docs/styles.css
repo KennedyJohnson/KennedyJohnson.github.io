@@ -349,3 +349,15 @@ section{
 section:last-of-type{
   margin-bottom:2rem;
 }
+.card h3 .status-tag{
+  display:inline-block;
+  margin-left:6px;
+  padding:2px 8px;
+  border:1px solid var(--muted, #6b7280);
+  border-radius:999px;
+  font-family:"IBM Plex Mono", monospace;
+  font-size:0.7rem;
+  font-weight:500;
+  color:var(--muted, #6b7280);
+  vertical-align:middle;
+}
