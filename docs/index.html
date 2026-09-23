@@ -90,6 +90,21 @@
             <a href="https://github.com/KennedyJohnson/instagram-likes-analysis" class="small" target="_blank" rel="noopener">GitHub Repo</a>
           </p>
         </article>
+        <article class="card">
+          <h3>Movie Recommender <span class="year">2026</span></h3>
+          <p>A live web app built on my capstone: rate a few movies and get a ranked list of what to watch next. Re-running the comparison on 33.8M fresh MovieLens ratings, SVDF still predicted single ratings best, but implicit ALS ranked lists over 5x better, so the app serves ALS through a FastAPI backend.</p>
+          <img src="images/movie-recommender.png" alt="Movie recommender app showing ranked recommendations with posters" class="card-img">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">NumPy / numba</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <p class="links">
+            <a href="https://kennedyjohnson.github.io/movie-recommender/" class="small" target="_blank" rel="noopener">Live Site</a>
+            <a href="https://github.com/KennedyJohnson/movie-recommender" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
       </div>
 
       <details class="older-projects">
@@ -104,16 +119,6 @@
             </p>
           </article>
 
-
-          <article class="card">
-            <h3>Movie Recommender <span class="year">2026</span></h3>
-            <p>A live web app built on my capstone: rate a few movies and get a ranked list of what to watch next. I re-ran the comparison on 33.8M fresh MovieLens ratings and added implicit-feedback ALS. SVDF was still the most accurate at predicting a single star rating, but implicit ALS built ranked lists more than 5x better (nDCG@10 of 0.30 vs 0.055), so the app serves ALS. The models are implemented from scratch in numba and trained locally. A FastAPI service on Render works out each new visitor's taste profile in milliseconds, and the frontend runs on GitHub Pages with TMDB posters.</p>
-            <img src="images/movie-recommender.png" alt="Movie recommender app showing ranked recommendations with posters" class="card-img">
-            <p class="links">
-              <a href="https://kennedyjohnson.github.io/movie-recommender/" class="small" target="_blank" rel="noopener">Live Demo</a>
-              <a href="https://github.com/KennedyJohnson/movie-recommender" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-          </article>
 
           <article class="card">
             <h3>Comparison of Recommender Algorithms <span class="year">2024</span></h3>
