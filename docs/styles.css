@@ -391,3 +391,10 @@ section:last-of-type{
   color:var(--muted, #6b7280);
   vertical-align:middle;
 }
+
+.card-img{
+  width:100%;
+  height:auto;
+  margin:16px 0;
+  border-radius:8px;
+}

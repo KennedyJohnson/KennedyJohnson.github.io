@@ -7,7 +7,7 @@
   <meta name="description" content="Ken Johnson: Data Engineer at Travelers Insurance and MS Analytics student at Georgia Tech. Portfolio of data engineering and machine learning projects." />
   <meta property="og:title" content="Ken Johnson" />
   <meta property="og:description" content="Data Engineer at Travelers Insurance, MS Analytics at Georgia Tech. Portfolio of data engineering and machine learning projects." />
-  <meta property="og:image" content="https://kennedyjohnson.github.io/headshot.jpg" />
+  <meta property="og:image" content="https://kennedyjohnson.github.io/images/headshot.jpg" />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/jpeg" href="images/headshot.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,8 +46,8 @@
       <div class="projects-grid">
         <article class="card featured">
           <h3>Twin Cities Living Quality Map <span class="year">2026</span></h3>
-          <p>Choosing where to live means weighing safety, affordability, and opportunity against each other, using information that's public but scattered across a dozen city, county, and federal sources. I built a Python/pytest pipeline that pulls open data from St. Paul, Minneapolis, OpenStreetMap, the U.S. Census, MnDOT, and CDC into a single weighted Health Score per district, surfaced through a Next.js map with address search and historical trend charts, so anyone can compare neighborhoods by what actually matters to them.</p>
-          <img src="images/map.jpg" alt="Twin Cities Living Quality Map screenshot" style="width: 100%; height: auto; margin: 16px 0; border-radius: 8px;">
+          <p>An interactive map that scores every St. Paul and Minneapolis district from 0–100 on safety, opportunity, amenities, transportation, and affordability. A Python pipeline pulls public data from the two cities, OpenStreetMap, the Census, MnDOT, and CDC, and a Next.js map adds address search and multi-year trends.</p>
+          <img src="images/map.jpg" alt="Twin Cities Living Quality Map screenshot" class="card-img">
           <div class="tech-stack">
             <span class="tech-tag">Next.js</span>
             <span class="tech-tag">Python</span>
@@ -60,6 +60,36 @@
           </p>
         </article>
 
+        <article class="card">
+          <h3>Minneapolis Home Assessment Check <span class="year">2026</span></h3>
+          <p>A lookup tool that shows Minneapolis homeowners whether their assessed value is in line with similar nearby sales and an independent gradient-boosted model. In backtests, the model's typical error (10.7%) beat the city's (12.0%).</p>
+          <img src="images/housing.png" alt="Minneapolis Home Assessment Check screenshot" class="card-img">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">scikit-learn</span>
+            <span class="tech-tag">Conformal prediction</span>
+            <span class="tech-tag">GitHub Pages</span>
+          </div>
+          <p class="links">
+            <a href="https://kennedyjohnson.github.io/twin-cities-property-assessment/" class="small" target="_blank" rel="noopener">Live Site</a>
+            <a href="https://github.com/KennedyJohnson/twin-cities-property-assessment" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3>Eleven Years of Instagram Likes <span class="year">2026</span></h3>
+          <p>A data story built from my own Instagram export: what I've been into, when I scroll, the mood of my feed, and how much of it the recommendation algorithm chose. Liked posts are sorted into categories with sentence embeddings and scored for sentiment with a RoBERTa model, and only aggregates are published.</p>
+          <img src="images/insta.png" alt="Instagram likes analysis screenshot" class="card-img">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">pandas</span>
+            <span class="tech-tag">Transformers</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <p class="links">
+            <a href="https://kennedyjohnson.github.io/instagram-likes-analysis/" class="small" target="_blank" rel="noopener">Live Site</a>
+            <a href="https://github.com/KennedyJohnson/instagram-likes-analysis" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
       </div>
 
       <details class="older-projects">
@@ -68,26 +98,17 @@
           <article class="card">
             <h3>Gopher Metro <span class="year">2024</span> <span class="status-tag">No longer active</span></h3>
             <p>Students at the University of Minnesota get transit passes for both campus Gopher buses and Metro Transit, but had no single place to track both in real time. I helped build a React/TypeScript web app that pulls live data from the Metro Transit and Peak Transit APIs into one map, so students can plan a trip across both systems without switching apps.</p>
-            <img src="images/bus.png" alt="Gopher Metro transportation app" style="width: 100%; height: auto; margin: 16px 0; border-radius: 8px;">
+            <img src="images/bus.png" alt="Gopher Metro transportation app" class="card-img">
             <p class="links">
               <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small" target="_blank" rel="noopener">GitHub Repo</a>
             </p>
           </article>
 
-          <article class="card">
-            <h3>MinneMUDAC 2023 - First Place <span class="year">2023</span></h3>
-            <p>The Minnesota Twins wanted better attendance forecasts to help inform game-day staffing and promotions. Our team modeled predicted gate attendance for the 2023 season from MLB and public data, then presented our approach to Twins executives and statisticians, placing 1st in the undergraduate division against teams from colleges nationwide.</p>
-            <img src="images/baseball.png" alt="Baseball attendance analysis visualization" style="width: 100%; height: auto; margin: 16px 0; border-radius: 8px;">
-            <p class="links">
-              <a href="https://minneanalytics.org/minnemudac2023/" class="small" target="_blank" rel="noopener">Event Details</a>
-              <a href="https://github.com/jroge29/minnemudac" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-          </article>
 
           <article class="card">
             <h3>Comparison of Recommender Algorithms <span class="year">2024</span></h3>
             <p>Not all recommender algorithms are worth their added complexity: some barely beat just suggesting the most popular movies. Using 32M MovieLens ratings split into sparse, moderate, and dense user datasets, we benchmarked collaborative filtering (UBCF, IBCF) against matrix factorization methods (SVD, SVDF, ALS, PMF) on RMSE, MAE, and precision/recall. Only SVDF and PMF consistently beat the popularity baseline across every dataset size, while collaborative filtering needed dense rating data to be competitive at all.</p>
-            <img src="images/recommender.png" alt="Recommender algorithms comparison analysis" style="width: 100%; height: auto; margin: 16px 0; border-radius: 8px;">
+            <img src="images/recommender.png" alt="Recommender algorithms comparison analysis" class="card-img">
             <p class="links">
               <a href="https://github.com/KennedyJohnson/DSCI-4093" class="small" target="_blank" rel="noopener">GitHub Repo</a>
               <a href="DSCI%204093%20Presentation.pdf" class="small" target="_blank" rel="noopener">Slides</a>
@@ -97,8 +118,17 @@
           <article class="card">
             <h3>Heart Failure Survival Analysis <span class="year">2024</span></h3>
             <p>Not every clinical measurement taken for heart failure patients is actually useful for predicting survival: some noisy features were hurting classification more than helping. Using PCA and MDS for dimensionality reduction, then a Gaussian Graphical Model to select the few variables most tied to mortality (ejection fraction and serum creatinine among them), we improved a KNN survival classifier's accuracy from 20% to 85%, pointing to specific measurements clinicians could prioritize when monitoring at-risk patients.</p>
-            <img src="images/heart.png" alt="Heart failure survival analysis visualization" style="width: 100%; height: auto; margin: 16px 0; border-radius: 8px;">
+            <img src="images/heart.png" alt="Heart failure survival analysis visualization" class="card-img">
             <p class="links"><span class="small">Coursework project, no public link</span></p>
+          </article>
+          <article class="card">
+            <h3>MinneMUDAC 2023 - First Place <span class="year">2023</span></h3>
+            <p>The Minnesota Twins wanted better attendance forecasts to help inform game-day staffing and promotions. Our team modeled predicted gate attendance for the 2023 season from MLB and public data, then presented our approach to Twins executives and statisticians, placing 1st in the undergraduate division against teams from colleges nationwide.</p>
+            <img src="images/baseball.png" alt="Baseball attendance analysis visualization" class="card-img">
+            <p class="links">
+              <a href="https://minneanalytics.org/minnemudac2023/" class="small" target="_blank" rel="noopener">Event Details</a>
+              <a href="https://github.com/jroge29/minnemudac" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+            </p>
           </article>
         </div>
       </details>
