@@ -106,6 +106,16 @@
 
 
           <article class="card">
+            <h3>Movie Recommender <span class="year">2026</span></h3>
+            <p>A live web app built on my capstone: rate a few movies and get a ranked list of what to watch next. I re-ran the comparison on 33.8M fresh MovieLens ratings and added implicit-feedback ALS. SVDF was still the most accurate at predicting a single star rating, but implicit ALS built ranked lists more than 5x better (nDCG@10 of 0.30 vs 0.055), so the app serves ALS. The models are implemented from scratch in numba and trained locally. A FastAPI service on Render works out each new visitor's taste profile in milliseconds, and the frontend runs on GitHub Pages with TMDB posters.</p>
+            <img src="images/movie-recommender.png" alt="Movie recommender app showing ranked recommendations with posters" class="card-img">
+            <p class="links">
+              <a href="https://kennedyjohnson.github.io/movie-recommender/" class="small" target="_blank" rel="noopener">Live Demo</a>
+              <a href="https://github.com/KennedyJohnson/movie-recommender" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+            </p>
+          </article>
+
+          <article class="card">
             <h3>Comparison of Recommender Algorithms <span class="year">2024</span></h3>
             <p>Not all recommender algorithms are worth their added complexity: some barely beat just suggesting the most popular movies. Using 32M MovieLens ratings split into sparse, moderate, and dense user datasets, we benchmarked collaborative filtering (UBCF, IBCF) against matrix factorization methods (SVD, SVDF, ALS, PMF) on RMSE, MAE, and precision/recall. Only SVDF and PMF consistently beat the popularity baseline across every dataset size, while collaborative filtering needed dense rating data to be competitive at all.</p>
             <img src="images/recommender.png" alt="Recommender algorithms comparison analysis" class="card-img">
@@ -115,12 +125,6 @@
             </p>
           </article>
 
-          <article class="card">
-            <h3>Heart Failure Survival Analysis <span class="year">2024</span></h3>
-            <p>Not every clinical measurement taken for heart failure patients is actually useful for predicting survival: some noisy features were hurting classification more than helping. Using PCA and MDS for dimensionality reduction, then a Gaussian Graphical Model to select the few variables most tied to mortality (ejection fraction and serum creatinine among them), we improved a KNN survival classifier's accuracy from 20% to 85%, pointing to specific measurements clinicians could prioritize when monitoring at-risk patients.</p>
-            <img src="images/heart.png" alt="Heart failure survival analysis visualization" class="card-img">
-            <p class="links"><span class="small">Coursework project, no public link</span></p>
-          </article>
           <article class="card">
             <h3>MinneMUDAC 2023 - First Place <span class="year">2023</span></h3>
             <p>The Minnesota Twins wanted better attendance forecasts to help inform game-day staffing and promotions. Our team modeled predicted gate attendance for the 2023 season from MLB and public data, then presented our approach to Twins executives and statisticians, placing 1st in the undergraduate division against teams from colleges nationwide.</p>
