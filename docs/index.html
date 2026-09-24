@@ -77,7 +77,7 @@
         </article>
         <article class="card">
           <h3>Movie Recommender <span class="year">2026</span></h3>
-          <p>A live web app: rate a few movies and get a ranked list of what to watch next. I benchmarked recommender algorithms on 33.8M MovieLens ratings: SVDF predicted single ratings best, but implicit ALS ranked lists over 5x better, so the app serves ALS through a FastAPI backend.</p>
+          <p>A live web app: rate a few movies and get a ranked list of what to watch next. It grew out of my 2024 capstone, where we benchmarked eight recommender algorithms on 32M MovieLens ratings and found only SVDF and PMF consistently beat recommending the most popular movies. Re-running the comparison on 33.8M fresh ratings, SVDF still predicted single ratings best, but implicit ALS ranked lists over 5x better, so the app serves ALS through a FastAPI backend.</p>
           <img src="images/movie-recommender.png" alt="Movie recommender app showing ranked recommendations with posters" class="card-img">
           <div class="tech-stack">
             <span class="tech-tag">Python</span>
