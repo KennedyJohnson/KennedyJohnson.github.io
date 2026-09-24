@@ -398,3 +398,4 @@ section:last-of-type{
   margin:16px 0;
   border-radius:8px;
 }
+video.card-img{ display:block; aspect-ratio:1200/750; object-fit:cover; background:#eee; }
