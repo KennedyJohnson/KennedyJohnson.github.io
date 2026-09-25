@@ -121,21 +121,25 @@
             <a href="https://github.com/KennedyJohnson/creekside" class="small" target="_blank" rel="noopener">GitHub Repo</a>
           </p>
         </article>
-      </div>
 
-      <details class="older-projects">
-        <summary>Older Projects</summary>
-        <div class="projects-grid">
-          <article class="card">
-            <h3>Gopher Metro <span class="year">2024</span> <span class="status-tag">No longer active</span></h3>
-            <p>Students at the University of Minnesota get transit passes for both campus Gopher buses and Metro Transit, but had no single place to track both in real time. I helped build a React/TypeScript web app that pulls live data from the Metro Transit and Peak Transit APIs into one map, so students can plan a trip across both systems without switching apps.</p>
-            <img src="images/bus.png" alt="Gopher Metro transportation app" class="card-img">
-            <p class="links">
-              <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-            </p>
-          </article>
-        </div>
-      </details>
+        <article class="card">
+          <h3>Gopher X Metro <span class="year">2026</span></h3>
+          <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team of eight (Adam, Ken, Riley, Will, Babacar, Alex, Mike, and Andy), and in 2026 I revived it after the original hosting lapsed. I ported the map from Google Maps to Leaflet and OpenStreetMap, replaced the Supabase backend with static JSON built from Metro Transit's GTFS feed, and set up a GitHub Action that refreshes schedules weekly. It now runs free with no API keys, and tapping any stop shows its next departures.</p>
+          <video src="videos/gopher.webm" poster="images/gopher.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Live campus buses and Green Line trains moving on the Gopher X Metro map, then a stop's upcoming departures"></video>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Leaflet</span>
+            <span class="tech-tag">GTFS / GTFS-Realtime</span>
+            <span class="tech-tag">GitHub Actions</span>
+          </div>
+          <p class="links">
+            <a href="https://kennedyjohnson.github.io/Gopher-X-Metro/" class="small" target="_blank" rel="noopener">Live Site</a>
+            <a href="https://github.com/KennedyJohnson/Gopher-X-Metro" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+            <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small" target="_blank" rel="noopener">Original Team Repo</a>
+          </p>
+        </article>
+      </div>
     </section>
 
   </main>
