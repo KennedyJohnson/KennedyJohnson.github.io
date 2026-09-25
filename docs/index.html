@@ -60,6 +60,23 @@
           </p>
         </article>
 
+        <article class="card featured">
+          <h3>Gopher X Metro <span class="year">2026</span></h3>
+          <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team of eight (Adam, Ken, Riley, Will, Babacar, Alex, Mike, and Andy), and in 2026 I revived it after the original hosting lapsed. I ported the map from Google Maps to Leaflet and OpenStreetMap, replaced the Supabase backend with static JSON built from Metro Transit's GTFS feed, and set up a GitHub Action that refreshes schedules weekly. It now runs free with no API keys, and tapping any stop shows its next departures.</p>
+          <video src="videos/gopher.webm" poster="images/gopher.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Live campus buses and Green Line trains moving on the Gopher X Metro map, then a stop's upcoming departures"></video>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Leaflet</span>
+            <span class="tech-tag">GTFS / GTFS-Realtime</span>
+            <span class="tech-tag">GitHub Actions</span>
+          </div>
+          <p class="links">
+            <a href="https://gopher-x-metro.github.io/Gopher-X-Metro/" class="small" target="_blank" rel="noopener">Live Site</a>
+            <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+
         <article class="card">
           <h3>Minneapolis Home Assessment Check <span class="year">2026</span></h3>
           <p>A lookup tool that shows Minneapolis homeowners how their assessed value compares with time-adjusted prices of similar nearby sales, plus an independent gradient-boosted estimate of this month's sale price with calibrated ranges. The model never sees the city's values. In the 2026 backtest, its typical error (9.4%) beat the city's (12.0%). Each home links back to the Living Quality Map for its neighborhood.</p>
@@ -119,23 +136,6 @@
           <p class="links">
             <a href="https://kennedyjohnson.github.io/creekside/" class="small" target="_blank" rel="noopener">Play It</a>
             <a href="https://github.com/KennedyJohnson/creekside" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Gopher X Metro <span class="year">2026</span></h3>
-          <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team of eight (Adam, Ken, Riley, Will, Babacar, Alex, Mike, and Andy), and in 2026 I revived it after the original hosting lapsed. I ported the map from Google Maps to Leaflet and OpenStreetMap, replaced the Supabase backend with static JSON built from Metro Transit's GTFS feed, and set up a GitHub Action that refreshes schedules weekly. It now runs free with no API keys, and tapping any stop shows its next departures.</p>
-          <video src="videos/gopher.webm" poster="images/gopher.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Live campus buses and Green Line trains moving on the Gopher X Metro map, then a stop's upcoming departures"></video>
-          <div class="tech-stack">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Leaflet</span>
-            <span class="tech-tag">GTFS / GTFS-Realtime</span>
-            <span class="tech-tag">GitHub Actions</span>
-          </div>
-          <p class="links">
-            <a href="https://gopher-x-metro.github.io/Gopher-X-Metro/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small" target="_blank" rel="noopener">GitHub Repo</a>
           </p>
         </article>
       </div>
