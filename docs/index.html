@@ -78,6 +78,23 @@
         </article>
 
         <article class="card">
+          <h3>Will My Flight Be Delayed? <span class="year">2026</span></h3>
+          <p>Enter a US flight number and date to get the chance it arrives 15+ minutes late, with an animated route map, flight details and live weather. A LightGBM model trained on 7M flights uses airline, airport, route and flight-number history, aircraft type and age from the FAA registry, the plane's turnaround and inbound flight, holidays, and hourly weather at both ends. Features were chosen with SHAP. On two held-out months it reached an AUC of 0.73, compared with 0.62 for the flight's own track record. It runs entirely in the browser.</p>
+          <img src="images/flight-delay.png" alt="Route map from LAX to Chicago O'Hare with an 11% chance of a 15+ minute delay" class="card-img">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">LightGBM</span>
+            <span class="tech-tag">SHAP</span>
+            <span class="tech-tag">Leaflet</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <p class="links">
+            <a href="https://kennedyjohnson.github.io/will-my-flight-be-delayed/" class="small" target="_blank" rel="noopener">Live Site</a>
+            <a href="https://github.com/KennedyJohnson/will-my-flight-be-delayed" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+          </p>
+        </article>
+
+        <article class="card">
           <h3>Minneapolis Home Assessment Check <span class="year">2026</span></h3>
           <p>A lookup tool that shows Minneapolis homeowners how their assessed value compares with time-adjusted prices of similar nearby sales, plus an independent gradient-boosted estimate of this month's sale price with calibrated ranges. The model never sees the city's values. In the 2026 backtest, its typical error (9.4%) beat the city's (12.0%). Each home links back to the Living Quality Map for its neighborhood.</p>
           <video src="videos/assessment.webm" poster="images/housing.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Looking up a Minneapolis home and comparing its assessed value with similar sales"></video>
