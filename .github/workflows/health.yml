@@ -13,7 +13,7 @@ jobs:
   health:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Sites up and data fresh
         run: python .github/scripts/health.py
       - name: Broken links on the portfolio
@@ -22,7 +22,7 @@ jobs:
         with:
           args: --no-progress --exclude linkedin.com docs/index.html
           fail: true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: health-report
@@ -36,7 +36,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         with:
           script: |
             await github.rest.issues.create({
