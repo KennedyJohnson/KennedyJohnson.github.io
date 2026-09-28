@@ -218,6 +218,12 @@ body{
   line-height:1.6;
 }
 
+.card p.lead{
+  margin-bottom:0.5rem;
+  color:var(--text);
+  font-weight:600;
+}
+
 .tech-stack{
   display:flex;
   flex-wrap:wrap;

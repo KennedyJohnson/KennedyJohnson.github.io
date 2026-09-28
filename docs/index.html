@@ -47,6 +47,7 @@
       <div class="projects-grid">
         <article class="card featured">
           <h3>Twin Cities Living Quality Map <span class="year">2026</span></h3>
+          <p class="lead">Scores every Minneapolis and St. Paul district 0-100 on livability, refreshed automatically from public data.</p>
           <p>An interactive map that scores every St. Paul and Minneapolis district from 0–100 on safety, opportunity, amenities, transportation, and economic profile. A Python pipeline pulls public data from the two cities, OpenStreetMap, the Census, MnDOT, and CDC, and a Next.js map adds address search and multi-year trends. In Minneapolis it connects to the Home Assessment Check: each community shows how its property-tax values compare with sale prices, and any home you search links to its own assessment.</p>
           <video src="videos/map.webm" poster="images/map.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Searching an address on the Twin Cities Living Quality Map and scrolling its score breakdown"></video>
           <div class="tech-stack">
@@ -63,7 +64,8 @@
 
         <article class="card featured">
           <h3>Gopher X Metro <span class="year">2026</span></h3>
-          <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team of eight (Adam, Ken, Riley, Will, Babacar, Alex, Mike, and Andy), and in 2026 I revived it after the original hosting lapsed. I ported the map from Google Maps to Leaflet and OpenStreetMap, replaced the Supabase backend with static JSON built from Metro Transit's GTFS feed, and set up a GitHub Action that refreshes schedules weekly. It now runs free with no API keys, and tapping any stop shows its next departures.</p>
+          <p class="lead">One live map for U of M campus buses and Metro Transit, rebuilt to run free with no API keys.</p>
+          <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team from Social Coding at UMN, and in 2026 I revived it after the original hosting lapsed.</p>
           <video src="videos/gopher.mp4" class="card-img portrait" autoplay muted loop playsinline preload="metadata" aria-label="Live campus buses and Green Line trains moving on the Gopher X Metro map, then a stop's upcoming departures"></video>
           <div class="tech-stack">
             <span class="tech-tag">React</span>
@@ -80,7 +82,8 @@
 
         <article class="card">
           <h3>Will My Flight Be Delayed? <span class="year">2026</span></h3>
-          <p>Enter a US flight number and date to get the chance it arrives 15+ minutes late, with an animated route map, flight details and live weather. A LightGBM model trained on 7M flights uses airline, airport, route and flight-number history, aircraft type and age from the FAA registry, the plane's turnaround and inbound flight, holidays, and hourly weather at both ends. Features were chosen with SHAP. On two held-out months it reached an AUC of 0.73, compared with 0.62 for the flight's own track record. It runs entirely in the browser.</p>
+          <p class="lead">Predicts whether a US flight will arrive late: AUC 0.73 on 7M flights, running entirely in the browser.</p>
+          <p>Enter a US flight number and date to get the chance it arrives 15+ minutes late, with an animated route map, flight details and live weather. A LightGBM model trained on 7M flights uses airline, airport, route and flight-number history, aircraft type and age from the FAA registry, the plane's turnaround and inbound flight, holidays, and hourly weather at both ends. I kept only the inputs that measurably moved the predictions. On two held-out months it reached an AUC of 0.73, compared with 0.62 for the flight's own track record.</p>
           <img src="images/flight-delay.png" alt="Route map from LAX to Chicago O'Hare with an 11% chance of a 15+ minute delay" class="card-img">
           <div class="tech-stack">
             <span class="tech-tag">Python</span>
@@ -97,7 +100,8 @@
 
         <article class="card">
           <h3>Minneapolis Home Assessment Check <span class="year">2026</span></h3>
-          <p>A lookup tool that shows Minneapolis homeowners how their assessed value compares with time-adjusted prices of similar nearby sales, plus an independent gradient-boosted estimate of this month's sale price with calibrated ranges. The model never sees the city's values. In the 2026 backtest, its typical error (9.4%) beat the city's (12.0%). Each home links back to the Living Quality Map for its neighborhood.</p>
+          <p class="lead">Checks Minneapolis home assessments against real sales, with a price model more accurate than the city's (9.4% vs 12.0% error).</p>
+          <p>A lookup tool that shows Minneapolis homeowners how their assessed value compares with time-adjusted prices of similar nearby sales, plus an independent machine-learning estimate of this month's sale price with a likely price range. The model never sees the city's values. In the 2026 backtest, its typical error (9.4%) beat the city's (12.0%). Each home links back to the Living Quality Map for its neighborhood.</p>
           <video src="videos/assessment.webm" poster="images/housing.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Looking up a Minneapolis home and comparing its assessed value with similar sales"></video>
           <div class="tech-stack">
             <span class="tech-tag">Python</span>
@@ -112,7 +116,8 @@
         </article>
         <article class="card">
           <h3>Movie Recommender <span class="year">2026</span></h3>
-          <p>A live web app: rate a few movies and get a ranked list of what to watch next. It extends my 2024 capstone's benchmark of eight recommenders on 33.8M fresh MovieLens ratings. EASE ranked best, at 7x SVDF's nDCG@10, so the app serves it through FastAPI.</p>
+          <p class="lead">Rate a few movies and get personal picks from the best of eight recommenders I benchmarked on 33.8M ratings.</p>
+          <p>A live web app: rate a few movies and get a ranked list of what to watch next. It extends my 2024 capstone's benchmark of eight recommenders on 33.8M fresh MovieLens ratings. The winning model ranked relevant movies about 7x better than a standard matrix-factorization baseline.</p>
           <video src="videos/movies.webm" poster="images/movie-recommender.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Rating five movies and getting a ranked list of recommendations"></video>
           <div class="tech-stack">
             <span class="tech-tag">Python</span>
@@ -128,6 +133,7 @@
         </article>
         <article class="card">
           <h3>My Social Media, as Data <span class="year">2026</span></h3>
+          <p class="lead">Fourteen years of my own social media data, showing how algorithms took over my feeds.</p>
           <p>One data story built from fourteen years of my Instagram, Reddit, YouTube, Snapchat and Twitter exports plus an iPhone backup (iMessage and Apple Health), publishing only aggregates. It tracks how recommendation algorithms took over every feed (my top 10 accounts went from most of my likes to under 10%), how short video ate my feeds, why doomscrolling pays off for the companies, and where AI fits in, then contrasts it with texting, where my top 10 conversations get 89% of my messages, and with the steps my phone counts when I'm not on it.</p>
           <img src="images/social.png" alt="Social media analysis: headline stats including 321,181 Reddit upvotes, 32,881 YouTube likes, and 94% of this year's Instagram likes being Reels" class="card-img">
           <div class="tech-stack">
@@ -143,6 +149,7 @@
         </article>
         <article class="card">
           <h3>Creekside <span class="year">2026</span></h3>
+          <p class="lead">A two-player co-op puzzle-platformer built from scratch for the browser.</p>
           <p>A couch co-op pixel puzzle-platformer for two players on PS5 controllers, inspired by It Takes Two and Pico Park. An otter and a red panda, with Bear the dog, work through ten chapters of puzzles built around teamwork: stacking, pushing together, synced buttons, pulleys, and walls only one of them can pass. Along the way they rescue lost animal friends. Built on the Emerald WebGL engine, with procedural pixel art, custom tile physics, and synthesized chiptune audio.</p>
           <video src="videos/creekside.webm" poster="images/creekside.png" class="card-img" autoplay muted loop playsinline preload="metadata" aria-label="Creekside gameplay: the otter, red panda and Bear the dog exploring chapter 1 together"></video>
           <div class="tech-stack">
