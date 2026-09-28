@@ -83,7 +83,7 @@
         <article class="card">
           <h3>Will My Flight Be Delayed? <span class="year">2026</span></h3>
           <p class="lead">Predicts whether a US flight will arrive late: AUC 0.73 on 7M flights.</p>
-          <p>Enter a US flight number and date to get the chance it arrives 15+ minutes late, with an animated route map, flight details and live weather. A LightGBM model trained on 7M flights uses airline, airport, route and flight-number history, aircraft type and age from the FAA registry, the plane's turnaround and inbound flight, holidays, and hourly weather at both ends. I kept only the inputs that measurably moved the predictions. On two held-out months it reached an AUC of 0.73, compared with 0.62 for the flight's own track record.</p>
+          <p>Enter a US flight number and date to get the chance it arrives 15+ minutes late, with an animated route map, flight details and live weather. A LightGBM model trained on 7M flights uses airline, airport, route and flight-number history, aircraft type and age from the FAA registry, the plane's turnaround and inbound flight, holidays, and hourly weather at both ends. I kept only the inputs that measurably moved the predictions. Tested on two months of flights it never saw, it picked out delayed flights 73% of the time, versus 62% using the flight's past on-time record alone.</p>
           <img src="images/flight-delay.png" alt="Route map from LAX to Chicago O'Hare with an 11% chance of a 15+ minute delay" class="card-img">
           <div class="tech-stack">
             <span class="tech-tag">Python</span>
@@ -144,7 +144,7 @@
           </div>
           <p class="links">
             <a href="https://kennedyjohnson.github.io/social-media-analysis/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/KennedyJohnson/social-media-analysis" class="small" target="_blank" rel="noopener">Repo</a>
+            <a href="https://github.com/KennedyJohnson/social-media-analysis" class="small" target="_blank" rel="noopener">GitHub Repo</a>
           </p>
         </article>
         <article class="card">
