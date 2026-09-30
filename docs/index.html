@@ -66,6 +66,7 @@
           <h3>Gopher X Metro <span class="year">2026</span></h3>
           <p class="lead">One live map for U of M campus buses and Metro Transit, rebuilt to run free with no API keys.</p>
           <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team from Social Coding at UMN, and in 2026 I revived it after the original hosting lapsed.</p>
+          <p><b>Companion: Will My Bus Be Late?</b> Pick a route, stop and time to see how late each scheduled departure usually runs, the chance it's 5+ minutes late, and the chance it leaves early. A GitHub Action records every Metro Transit bus and train's lateness from the live feed every 15 minutes. Three LightGBM models are retrained each morning on that history plus the weather forecast and run in the browser. Each day's predictions are scored against what actually happened.</p>
           <video src="videos/gopher.mp4" class="card-img portrait" autoplay muted loop playsinline preload="metadata" aria-label="Live campus buses and Green Line trains moving on the Gopher X Metro map, then a stop's upcoming departures"></video>
           <div class="tech-stack">
             <span class="tech-tag">React</span>
@@ -73,10 +74,13 @@
             <span class="tech-tag">Leaflet</span>
             <span class="tech-tag">GTFS / GTFS-Realtime</span>
             <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">LightGBM</span>
           </div>
           <p class="links">
             <a href="https://gopher-x-metro.github.io/Gopher-X-Metro/" class="small" target="_blank" rel="noopener">Live Site</a>
             <a href="https://github.com/Gopher-X-Metro/Gopher-X-Metro" class="small" target="_blank" rel="noopener">GitHub Repo</a>
+            <a href="https://kennedyjohnson.github.io/metro-transit-delays/" class="small" target="_blank" rel="noopener">Delay Forecast</a>
+            <a href="https://github.com/KennedyJohnson/metro-transit-delays" class="small" target="_blank" rel="noopener">Forecast Repo</a>
           </p>
         </article>
 
