@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -12,8 +12,8 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" type="image/jpeg" href="images/headshot.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=DM+Serif+Display&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css?v=32">
 </head>
 <body>
   <header class="site-header">
@@ -44,145 +44,83 @@
     <section id="projects">
       <h2>Projects</h2>
 
-
       <div class="projects-grid">
         <article class="card featured">
-          <h3>Twin Cities Living Quality Map <span class="status-tag">Live · auto-refreshed</span></h3>
-          <p class="lead">Scores every Minneapolis and St. Paul district 0-100 on livability, refreshed automatically from public data.</p>
-          <details class="more"><summary>More</summary>
-            <p>An interactive map that scores every St. Paul and Minneapolis district from 0–100 on safety, opportunity, amenities, transportation, and economic profile. A Python pipeline pulls public data from the two cities, OpenStreetMap, the Census, MnDOT, and CDC, and a Next.js map adds address search and multi-year trends. In Minneapolis it connects to the Home Assessment Check: each community shows how its property-tax values compare with sale prices, and any home you search links to its own assessment.</p>
-          </details>
+          <h3><a class="title-link" href="https://twin-cities-living-quality-map.vercel.app/" target="_blank" rel="noopener">Twin Cities Living Quality Map</a></h3>
+          <p class="lead">Scores every Minneapolis and St. Paul district from 0 to 100 on safety, opportunity, amenities, transportation and economic profile, using public data refreshed automatically. Search any address to see its breakdown and multi-year trends.</p>
           <video src="videos/map.webm" poster="images/map.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Searching an address on the Twin Cities Living Quality Map and scrolling its score breakdown"></video>
-          <div class="tech-stack">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">GitHub Actions</span>
-            <span class="tech-tag">Vercel</span>
+          <div class="sub">
+            <h4><a class="title-link" href="https://kennedyjohnson.github.io/twin-cities-property-assessment/" target="_blank" rel="noopener">Minneapolis Home Assessment Check</a></h4>
+            <div class="sub-body">
+              <div class="sub-text">
+                <p>Checks Minneapolis home assessments against real sales, with a price model more accurate than the city's (9.4% vs 12.0% error). It never sees the city's values, and each home links back to the map for its neighborhood.</p>
+                <p>Type a Minneapolis address to compare the assessed value with time-adjusted prices of similar nearby sales, plus an independent estimate of this month's sale price with a likely range.</p>
+              </div>
+              <div class="sub-media"><img src="images/housing.png" alt="Minneapolis Home Assessment Check comparing a home's assessed value with similar sales" class="sub-img" loading="lazy"></div>
+            </div>
           </div>
-          <p class="links">
-            <a href="https://twin-cities-living-quality-map.vercel.app/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/KennedyJohnson/Twin-Cities_Living_Quality_Map" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
         </article>
 
         <article class="card featured">
-          <h3>Gopher X Metro <span class="status-tag">Live · retrained daily</span></h3>
-          <p class="lead">One live map for U of M campus buses and Metro Transit, rebuilt to run free with no API keys.</p>
-          <details class="more"><summary>More</summary>
-            <p>A live map of every University of Minnesota campus bus alongside Metro Transit buses and light rail, so students can use their transit pass without juggling apps. I built it in 2024 with a team from Social Coding at UMN, and in 2026 I revived it after the original hosting lapsed.</p>
-            <p><b>Companion: Will My Bus Be Late?</b> Pick a route, stop and time to see how often each departure runs late or early. LightGBM models retrained daily on live-feed history and weather run right in the browser.</p>
-          </details>
+          <h3><a class="title-link" href="https://gopher-x-metro.github.io/" target="_blank" rel="noopener">Gopher X Metro</a></h3>
+          <p class="lead">One live map of every U of M campus bus alongside Metro Transit buses and light rail, rebuilt to run free with no API keys. I built it in 2024 with a team from Social Coding at UMN and revived it in 2026 after the original hosting lapsed.</p>
           <video src="videos/gopher.mp4?v=2" class="card-img portrait" muted loop playsinline preload="metadata" aria-label="Gopher X Metro on a phone: picking routes, tapping a live bus for its next stop and delay, checking nearby stop departures, and searching for a place"></video>
-          <div class="tech-stack">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Leaflet</span>
-            <span class="tech-tag">GTFS / GTFS-Realtime</span>
-            <span class="tech-tag">GitHub Actions</span>
-            <span class="tech-tag">LightGBM</span>
+          <div class="sub">
+            <h4><a class="title-link" href="https://kennedyjohnson.github.io/metro-transit-delays/" target="_blank" rel="noopener">Delay Forecast: Will My Bus Be Late?</a></h4>
+            <div class="sub-body">
+              <div class="sub-text">
+                <p>Pick a route, stop and time to see how often each departure runs late or early. LightGBM models retrained daily on live-feed history and weather run right in the browser.</p>
+                <p>For each scheduled Metro Transit departure you see how late it usually runs, the chance it is 5+ minutes late, and the chance it leaves early, so you can pick which bus to catch.</p>
+              </div>
+              <div class="sub-media"><img src="images/delay-forecast.png" alt="Will My Bus Be Late? form for choosing a route, day and time" class="sub-img" loading="lazy"></div>
+            </div>
           </div>
-          <p class="links">
-            <a href="https://gopher-x-metro.github.io/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/Gopher-X-Metro/gopher-x-metro.github.io" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-            <a href="https://kennedyjohnson.github.io/metro-transit-delays/" class="small" target="_blank" rel="noopener">Delay Forecast</a>
-            <a href="https://github.com/KennedyJohnson/metro-transit-delays" class="small" target="_blank" rel="noopener">Forecast Repo</a>
-          </p>
         </article>
 
         <article class="card">
-          <h3>Will My Flight Be Delayed? <span class="status-tag">Live</span></h3>
-          <p class="lead">Predicts whether a US flight will arrive late: 73% on 7M flights.</p>
-          <details class="more"><summary>More</summary>
-            <p>Enter a US flight number and date to get the chance it arrives 15+ minutes late, with an animated route map, flight details and live weather. A LightGBM model trained on 7M flights uses airline, airport, route and flight-number history, aircraft type and age from the FAA registry, the plane's turnaround and inbound flight, holidays, and hourly weather at both ends. I kept only the inputs that measurably moved the predictions. Tested on two months of flights it never saw, it picked out delayed flights 73% of the time, versus 62% using the flight's past on-time record alone.</p>
-          </details>
+          <h3><a class="title-link" href="https://kennedyjohnson.github.io/will-my-flight-be-delayed/" target="_blank" rel="noopener">Will My Flight Be Delayed?</a></h3>
+          <p class="lead">Enter a US flight number and date to get the chance it arrives 15+ minutes late, with a route map and live weather. A LightGBM model trained on 7M flights picks out delayed flights 73% of the time, versus 62% from a flight's past on-time record alone.</p>
           <img src="images/flight-delay.png" alt="Route map from LAX to Chicago O'Hare with an 11% chance of a 15+ minute delay" class="card-img" loading="lazy">
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">LightGBM</span>
-            <span class="tech-tag">SHAP</span>
-            <span class="tech-tag">Leaflet</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-          <p class="links">
-            <a href="https://kennedyjohnson.github.io/will-my-flight-be-delayed/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/KennedyJohnson/will-my-flight-be-delayed" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
         </article>
 
         <article class="card">
-          <h3>Minneapolis Home Assessment Check <span class="status-tag">Live</span></h3>
-          <p class="lead">Checks Minneapolis home assessments against real sales, with a price model more accurate than the city's (9.4% vs 12.0% error).</p>
-          <details class="more"><summary>More</summary>
-            <p>A lookup tool that shows Minneapolis homeowners how their assessed value compares with time-adjusted prices of similar nearby sales, plus an independent machine-learning estimate of this month's sale price with a likely price range. The model never sees the city's values. In the 2026 backtest, its typical error (9.4%) beat the city's (12.0%). Each home links back to the Living Quality Map for its neighborhood.</p>
-          </details>
-          <video src="videos/assessment.webm" poster="images/housing.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Looking up a Minneapolis home and comparing its assessed value with similar sales"></video>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">scikit-learn</span>
-            <span class="tech-tag">Conformal prediction</span>
-            <span class="tech-tag">GitHub Pages</span>
-          </div>
-          <p class="links">
-            <a href="https://kennedyjohnson.github.io/twin-cities-property-assessment/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/KennedyJohnson/twin-cities-property-assessment" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
-        </article>
-        <article class="card">
-          <h3>Movie Recommender <span class="status-tag">Live</span></h3>
-          <p class="lead">Rate a few movies and get personal picks from the best of eight recommenders I benchmarked on 33.8M ratings.</p>
-          <details class="more"><summary>More</summary>
-            <p>A live web app: rate a few movies and get a ranked list of what to watch next. It extends my 2024 capstone's benchmark of eight recommenders on 33.8M fresh MovieLens ratings. The winning model ranked relevant movies about 7x better than a standard matrix-factorization baseline.</p>
-          </details>
+          <h3><a class="title-link" href="https://kennedyjohnson.github.io/movie-recommender/" target="_blank" rel="noopener">Movie Recommender</a></h3>
+          <p class="lead">Rate a few movies and get a ranked list of what to watch next. The model behind it won my benchmark of eight recommenders on 33.8M ratings, ranking relevant movies about 7x better than a standard baseline.</p>
           <video src="videos/movies.webm" poster="images/movie-recommender.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Rating five movies and getting a ranked list of recommendations"></video>
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">NumPy / numba</span>
-            <span class="tech-tag">EASE</span>
-            <span class="tech-tag">FastAPI</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-          <p class="links">
-            <a href="https://kennedyjohnson.github.io/movie-recommender/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/KennedyJohnson/movie-recommender" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
         </article>
+
         <article class="card">
-          <h3>My Social Media, as Data <span class="year">2026</span></h3>
-          <p class="lead">Fourteen years of my own social media data, showing how algorithms took over my feeds.</p>
-          <details class="more"><summary>More</summary>
-            <p>One data story built from fourteen years of my Instagram, Reddit, YouTube, Snapchat and Twitter exports plus an iPhone backup (iMessage and Apple Health), publishing only aggregates. It tracks how recommendation algorithms took over every feed (my top 10 accounts went from most of my likes to under 10%), how short video ate my feeds, why doomscrolling pays off for the companies, and where AI fits in, then contrasts it with texting, where my top 10 conversations get 89% of my messages, and with the steps my phone counts when I'm not on it.</p>
-          </details>
+          <h3><a class="title-link" href="https://kennedyjohnson.github.io/social-media-analysis/" target="_blank" rel="noopener">My Social Media, as Data</a> <span class="year">2026</span></h3>
+          <p class="lead">Fourteen years of my own Instagram, Reddit, YouTube and other exports, published only as aggregates. It shows how recommendation algorithms took over my feeds, with my top 10 accounts going from most of my likes to under 10%.</p>
           <img src="images/social.png" alt="Social media analysis: headline stats including 321,181 Reddit upvotes, 32,881 YouTube likes, and 94% of this year's Instagram likes being Reels" class="card-img" loading="lazy">
-          <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">pandas</span>
-            <span class="tech-tag">Transformers</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-          <p class="links">
-            <a href="https://kennedyjohnson.github.io/social-media-analysis/" class="small" target="_blank" rel="noopener">Live Site</a>
-            <a href="https://github.com/KennedyJohnson/social-media-analysis" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
-        </article>
-        <article class="card">
-          <h3>Creekside <span class="status-tag">Playable</span></h3>
-          <p class="lead">A two-player co-op puzzle-platformer built from scratch for the browser.</p>
-          <details class="more"><summary>More</summary>
-            <p>A couch co-op pixel puzzle-platformer for two players on PS5 controllers, inspired by It Takes Two and Pico Park. An otter and a red panda, with Bear the dog, work through ten chapters of puzzles built around teamwork: stacking, pushing together, synced buttons, pulleys, and walls only one of them can pass. Along the way they rescue lost animal friends. Built on the Emerald WebGL engine, with procedural pixel art, custom tile physics, and synthesized chiptune audio.</p>
-          </details>
-          <video src="videos/creekside.webm" poster="images/creekside.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Creekside gameplay: the otter, red panda and Bear the dog exploring chapter 1 together"></video>
-          <div class="tech-stack">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">WebGL (Emerald)</span>
-            <span class="tech-tag">Gamepad API</span>
-            <span class="tech-tag">Vite</span>
-          </div>
-          <p class="links">
-            <a href="https://kennedyjohnson.github.io/creekside/" class="small" target="_blank" rel="noopener">Play It</a>
-            <a href="https://github.com/KennedyJohnson/creekside" class="small" target="_blank" rel="noopener">GitHub Repo</a>
-          </p>
         </article>
       </div>
+    </section>
+
+    <section id="games">
+      <h2>Games</h2>
+
+      <div class="projects-grid">
+        <article class="card">
+          <h3><a class="title-link" href="https://kennedyjohnson.github.io/creekside/" target="_blank" rel="noopener">Creekside</a></h3>
+          <p class="lead">A couch co-op pixel puzzle-platformer for two players, where an otter and a red panda work through ten chapters of teamwork puzzles. Built from scratch for the browser on the Emerald WebGL engine, with procedural pixel art and synthesized chiptune audio.</p>
+          <video src="videos/creekside.webm" poster="images/creekside.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Creekside gameplay: the otter, red panda and Bear the dog exploring chapter 1 together"></video>
+        </article>
+      </div>
+    </section>
+
+    <section id="source">
+      <h2>Source Code</h2>
+      <ul class="source-list">
+        <li><a href="https://github.com/KennedyJohnson/Twin-Cities_Living_Quality_Map" target="_blank" rel="noopener">Twin Cities Living Quality Map</a></li>
+        <li><a href="https://github.com/KennedyJohnson/twin-cities-property-assessment" target="_blank" rel="noopener">Minneapolis Home Assessment Check</a></li>
+        <li><a href="https://github.com/Gopher-X-Metro/gopher-x-metro.github.io" target="_blank" rel="noopener">Gopher X Metro</a></li>
+        <li><a href="https://github.com/KennedyJohnson/metro-transit-delays" target="_blank" rel="noopener">Delay Forecast: Will My Bus Be Late?</a></li>
+        <li><a href="https://github.com/KennedyJohnson/will-my-flight-be-delayed" target="_blank" rel="noopener">Will My Flight Be Delayed?</a></li>
+        <li><a href="https://github.com/KennedyJohnson/movie-recommender" target="_blank" rel="noopener">Movie Recommender</a></li>
+        <li><a href="https://github.com/KennedyJohnson/social-media-analysis" target="_blank" rel="noopener">My Social Media, as Data</a></li>
+        <li><a href="https://github.com/KennedyJohnson/creekside" target="_blank" rel="noopener">Creekside</a></li>
+      </ul>
     </section>
 
   </main>
