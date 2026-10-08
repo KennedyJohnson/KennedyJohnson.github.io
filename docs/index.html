@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=DM+Serif+Display&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap">
-  <link rel="stylesheet" href="styles.css?v=38">
+  <link rel="stylesheet" href="styles.css?v=39">
 </head>
 <body>
   <header class="site-header">
@@ -138,13 +138,19 @@
   <script>
     // Demo clips: play only while on screen; with reduced motion, show controls instead.
     const clips = document.querySelectorAll('video.card-img, video.sub-img');
+    // Some mobile browsers (e.g. iOS Low Power Mode) block autoplay; fall back to tap-to-play.
+    const tryPlay = (v) => {
+      v.muted = true;
+      const p = v.play();
+      if (p) p.catch(() => { v.controls = true; });
+    };
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
       clips.forEach((v) => { v.controls = true; });
     } else {
       const io = new IntersectionObserver((entries) => {
-        entries.forEach((e) => { e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause(); });
-      }, { threshold: 0.25 });
-      clips.forEach((v) => io.observe(v));
+        entries.forEach((e) => { e.isIntersecting ? tryPlay(e.target) : e.target.pause(); });
+      }, { threshold: 0.1 });
+      clips.forEach((v) => { v.muted = true; io.observe(v); });
     }
   </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3d8de94c97044ab3a52df3918fc58f61"}'></script><!-- End Cloudflare Web Analytics -->
