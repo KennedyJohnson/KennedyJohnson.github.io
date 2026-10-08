@@ -564,3 +564,4 @@ video.card-img:not(.portrait){object-position:left top;aspect-ratio:4/3}
 @media(min-width:601px){.card .sub .sub-body{grid-template-columns:1fr;gap:1rem}}
 .card .sub .sub-media{min-height:0;aspect-ratio:1200/750}
 @media(min-width:601px){.card .sub .sub-body{grid-template-columns:1fr minmax(0,.85fr);gap:1.75rem;align-items:center}}
+@media(max-width:768px){.about-container{align-items:center}.profile-pic{margin-left:auto;margin-right:auto}}
