@@ -13,7 +13,7 @@
   <link rel="alternate icon" type="image/jpeg" href="images/headshot.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,400&family=DM+Serif+Display&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap">
-  <link rel="stylesheet" href="styles.css?v=32">
+  <link rel="stylesheet" href="styles.css?v=38">
 </head>
 <body>
   <header class="site-header">
@@ -46,22 +46,6 @@
 
       <div class="projects-grid">
         <article class="card featured">
-          <h3><a class="title-link" href="https://twin-cities-living-quality-map.vercel.app/" target="_blank" rel="noopener">Twin Cities Living Quality Map</a></h3>
-          <p class="lead">Scores every Minneapolis and St. Paul district from 0 to 100 on safety, opportunity, amenities, transportation and economic profile, using public data refreshed automatically. Search any address to see its breakdown and multi-year trends.</p>
-          <video src="videos/map.webm" poster="images/map.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Searching an address on the Twin Cities Living Quality Map and scrolling its score breakdown"></video>
-          <div class="sub">
-            <h4><a class="title-link" href="https://kennedyjohnson.github.io/twin-cities-property-assessment/" target="_blank" rel="noopener">Minneapolis Home Assessment Check</a></h4>
-            <div class="sub-body">
-              <div class="sub-text">
-                <p>Checks Minneapolis home assessments against real sales, with a price model more accurate than the city's (9.4% vs 12.0% error). It never sees the city's values, and each home links back to the map for its neighborhood.</p>
-                <p>Type a Minneapolis address to compare the assessed value with time-adjusted prices of similar nearby sales, plus an independent estimate of this month's sale price with a likely range.</p>
-              </div>
-              <div class="sub-media"><img src="images/housing.png" alt="Minneapolis Home Assessment Check comparing a home's assessed value with similar sales" class="sub-img" loading="lazy"></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="card featured">
           <h3><a class="title-link" href="https://gopher-x-metro.github.io/" target="_blank" rel="noopener">Gopher X Metro</a></h3>
           <p class="lead">One live map of every U of M campus bus alongside Metro Transit buses and light rail, rebuilt to run free with no API keys. I built it in 2024 with a team from Social Coding at UMN and revived it in 2026 after the original hosting lapsed.</p>
           <video src="videos/gopher.mp4?v=2" class="card-img portrait" muted loop playsinline preload="metadata" aria-label="Gopher X Metro on a phone: picking routes, tapping a live bus for its next stop and delay, checking nearby stop departures, and searching for a place"></video>
@@ -72,7 +56,23 @@
                 <p>Pick a route, stop and time to see how often each departure runs late or early. LightGBM models retrained daily on live-feed history and weather run right in the browser.</p>
                 <p>For each scheduled Metro Transit departure you see how late it usually runs, the chance it is 5+ minutes late, and the chance it leaves early, so you can pick which bus to catch.</p>
               </div>
-              <div class="sub-media"><img src="images/delay-forecast.png" alt="Will My Bus Be Late? form for choosing a route, day and time" class="sub-img" loading="lazy"></div>
+              <div class="sub-media"><video src="videos/bus.webm" poster="images/delay-forecast.png" class="sub-img" muted loop playsinline preload="metadata" aria-label="Choosing the Blue Line, a direction and a stop to see each upcoming departure"></video></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card featured">
+          <h3><a class="title-link" href="https://twin-cities-living-quality-map.vercel.app/" target="_blank" rel="noopener">Twin Cities Living Quality Map</a></h3>
+          <p class="lead">Scores every Minneapolis and St. Paul district from 0 to 100 on safety, opportunity, amenities, transportation and economic profile, using public data refreshed automatically. Search any address to see its breakdown and multi-year trends.</p>
+          <video src="videos/map.webm" poster="images/map.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Searching an address on the Twin Cities Living Quality Map and scrolling its score breakdown"></video>
+          <div class="sub">
+            <h4><a class="title-link" href="https://kennedyjohnson.github.io/twin-cities-property-assessment/" target="_blank" rel="noopener">Minneapolis Home Assessment Check</a></h4>
+            <div class="sub-body">
+              <div class="sub-text">
+                <p>Checks Minneapolis home assessments against real sales, with a price model more accurate than the city's (9.4% vs 12.0% error). It never sees the city's values, and each home links back to the map for its neighborhood.</p>
+                <p>Type a Minneapolis address to compare the assessed value with time-adjusted prices of similar nearby sales, plus an independent estimate of this month's sale price with a likely range.</p>
+              </div>
+              <div class="sub-media"><video src="videos/home.webm" poster="images/housing.png" class="sub-img" muted loop playsinline preload="metadata" aria-label="Looking up a Minneapolis home and seeing how its assessed value compares with similar sales"></video></div>
             </div>
           </div>
         </article>
@@ -80,7 +80,7 @@
         <article class="card">
           <h3><a class="title-link" href="https://kennedyjohnson.github.io/will-my-flight-be-delayed/" target="_blank" rel="noopener">Will My Flight Be Delayed?</a></h3>
           <p class="lead">Enter a US flight number and date to get the chance it arrives 15+ minutes late, with a route map and live weather. A LightGBM model trained on 7M flights picks out delayed flights 73% of the time, versus 62% from a flight's past on-time record alone.</p>
-          <img src="images/flight-delay.png" alt="Route map from LAX to Chicago O'Hare with an 11% chance of a 15+ minute delay" class="card-img" loading="lazy">
+          <video src="videos/flight.webm" poster="images/flight-delay.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Checking a flight number and seeing its route map, weather and chance of a delay"></video>
         </article>
 
         <article class="card">
@@ -92,7 +92,7 @@
         <article class="card">
           <h3><a class="title-link" href="https://kennedyjohnson.github.io/social-media-analysis/" target="_blank" rel="noopener">My Social Media, as Data</a> <span class="year">2026</span></h3>
           <p class="lead">Fourteen years of my own Instagram, Reddit, YouTube and other exports, published only as aggregates. It shows how recommendation algorithms took over my feeds, with my top 10 accounts going from most of my likes to under 10%.</p>
-          <img src="images/social.png" alt="Social media analysis: headline stats including 321,181 Reddit upvotes, 32,881 YouTube likes, and 94% of this year's Instagram likes being Reels" class="card-img" loading="lazy">
+          <video src="videos/social.webm" poster="images/social.png" class="card-img" muted loop playsinline preload="metadata" aria-label="Scrolling through the Fourteen years of being fed data story"></video>
         </article>
       </div>
     </section>
@@ -136,7 +136,7 @@
   </footer>
   <script>
     // Demo clips: play only while on screen; with reduced motion, show controls instead.
-    const clips = document.querySelectorAll('video.card-img');
+    const clips = document.querySelectorAll('video.card-img, video.sub-img');
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
       clips.forEach((v) => { v.controls = true; });
     } else {

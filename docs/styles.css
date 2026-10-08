@@ -553,3 +553,14 @@ video.card-img:not(.portrait){object-position:left top;aspect-ratio:4/3}
 .projects-grid>.card:not(.featured){display:flex;flex-direction:column}
 .projects-grid>.card:not(.featured) .card-img{flex:1 1 auto;min-height:0;width:100%;aspect-ratio:auto!important;object-fit:cover;object-position:left top}
 }
+.profile-pic{width:340px;height:340px;object-fit:cover;object-position:center 20%}
+@media(max-width:768px){.profile-pic{width:240px;height:240px}}
+
+@media(min-width:769px){
+.projects-grid>.card:nth-child(3) .card-img,.projects-grid>.card:nth-child(4) .card-img{flex:none;aspect-ratio:1200/750!important;height:auto;object-fit:cover;object-position:center}
+}
+.card .sub .sub-media video.sub-img{object-fit:cover;object-position:center top}
+.profile-pic{border:2px solid #8ab4f8!important}
+@media(min-width:601px){.card .sub .sub-body{grid-template-columns:1fr;gap:1rem}}
+.card .sub .sub-media{min-height:0;aspect-ratio:1200/750}
+@media(min-width:601px){.card .sub .sub-body{grid-template-columns:1fr minmax(0,.85fr);gap:1.75rem;align-items:center}}
