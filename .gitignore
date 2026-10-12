@@ -1,0 +1,10 @@
+# LaTeX build output (keep the .tex source, not the build files)
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.toc
+resume/*.fls
+resume/*.fdb_latexmk
+resume/*.synctex.gz
+texput.log
+resume/Kennedy_Johnson_Resume.pdf
