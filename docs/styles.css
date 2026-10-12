@@ -565,3 +565,9 @@ video.card-img:not(.portrait){object-position:left top;aspect-ratio:4/3}
 .card .sub .sub-media{min-height:0;aspect-ratio:1200/750}
 @media(min-width:601px){.card .sub .sub-body{grid-template-columns:1fr minmax(0,.85fr);gap:1.75rem;align-items:center}}
 @media(max-width:768px){.about-container{align-items:center}.profile-pic{margin-left:auto;margin-right:auto}}
+
+img.card-img{display:block;height:auto!important;aspect-ratio:auto!important;object-fit:fill!important;background:#141414}
+.card.wide{grid-column:1/-1}
+.projects-grid>.card:not(.featured) img.card-img{flex:none;aspect-ratio:auto!important;height:auto!important;object-fit:fill!important}
+.card .sub .sub-media:has(img){aspect-ratio:auto;overflow:visible}
+.card .sub .sub-media img.sub-img{position:static;height:auto;width:100%;border-radius:8px;border:1px solid rgba(128,128,128,.25)!important}
