@@ -8,8 +8,8 @@ GH = "https://kennedyjohnson.github.io"
 # (name, url that must load, freshness json url or None, json key holding a date, max age in days)
 CHECKS = [
     ("Portfolio", f"{GH}/", None, None, None),
-    ("Living Quality Map", "https://twin-cities-living-quality-map.vercel.app/",
-     "https://twin-cities-living-quality-map.vercel.app/data/last_updated.json", "updated", 45),
+    ("Living Quality Map", "https://twin-cities-living-quality-map.ken-j.workers.dev/",
+     "https://twin-cities-living-quality-map.ken-j.workers.dev/data/last_updated.json", "updated", 45),
     ("Property Assessment", f"{GH}/twin-cities-property-assessment/",
      f"{GH}/twin-cities-property-assessment/data/summary.json", "built", 60),
     ("Flight Delays", f"{GH}/will-my-flight-be-delayed/",
