@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kennedy Johnson - One-Page Resume
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=letter,fontsize=10.5pt]{scrartcl}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage[svgnames]{xcolor}
+\usepackage[left=1.3cm,right=1.3cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage{sectsty}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  pdftitle={Kennedy Johnson - Resume},
+  pdfauthor={Kennedy Johnson}
+}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=1pt, parsep=0pt}
+
+\sectionfont{\usefont{OT1}{phv}{b}{n}\sectionrule{0pt}{0pt}{-5pt}{1pt}}
+\frenchspacing
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\newcommand{\MyName}[1]{\begin{center}\Huge\usefont{OT1}{ppl}{b}{n}#1\end{center}}
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+% \Org{Organization}{Location or dates}
+\newcommand{\Org}[2]{\textbf{#1}\hfill\textit{#2}\par}
+% \Role{Title}{Dates}
+\newcommand{\Role}[2]{\textit{#1}\hfill #2\par}
+% \Project{Name}{URL}{Date}
+\newcommand{\Project}[3]{\textbf{\href{#2}{#1}}\hfill #3\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\MyName{Kennedy Johnson}
+\vspace{-4pt}
+\begin{center}\small St.\ Paul, MN \enspace$\cdot$\enspace
+\href{https://www.linkedin.com/in/kennedy-ken-johnson/}{linkedin.com/in/kennedy-ken-johnson} \enspace$\cdot$\enspace
+\href{https://kennedyjohnson.github.io/}{kennedyjohnson.github.io}\end{center}
+\vspace{-6pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPart{Experience}
+
+\Org{Travelers Insurance}{St.\ Paul, MN}
+\Role{Associate Data Engineer, BI\&A Leadership Development Program}{Feb 2025 -- Present}
+\begin{itemize}
+  \item Deployed a RAG-based support chatbot (Databricks Agent Framework, Vector Search, Streamlit) answering infrastructure and access questions from a live knowledge base for 300+ analytics users
+  \item Developed Databricks governance pipelines (Jobs, Unity Catalog, Snowflake) that inventory compute and enforce cost and ownership policy
+  \item Built cross-account serverless AWS automations (Lambda, EventBridge, SNS) that monitor compute health and reclaim idle resources across 12 accounts, saving tens of thousands of dollars yearly
+\end{itemize}
+\vspace{3pt}
+\Role{Business Intelligence Intern}{Summer 2024}
+\begin{itemize}
+  \item Built automated monitoring (Snowflake, SQL, AWS, Python) for a production predictive model used by hundreds of attorneys, catching model failures early
+\end{itemize}
+
+\vspace{5pt}
+\Org{University of Minnesota -- Twin Cities}{Minneapolis, MN}
+\Role{Teaching Assistant, Computer Systems \& Linear Algebra}{Fall 2023 -- Spring 2024}
+\begin{itemize}
+  \item Led weekly lab sections for 40+ students in Intro to Computer Systems, teaching C and assembly-level computation
+  \item Led a weekly Linear Algebra discussion section for 40 students, teaching core concepts with NumPy-based computation and visualization
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPart{Projects}
+
+\Project{Gopher X Metro + Delay Forecast}{https://gopher-x-metro.github.io/}{2024, 2026}
+\begin{itemize}
+  \item Co-built a live map of U of M campus buses and Metro Transit buses and light rail, then revived it in 2026 as a free static site with no API keys
+  \item Added daily-retrained LightGBM models (live-feed history + weather) that predict each departure's chance of running 5+ minutes late, in the browser
+\end{itemize}
+\vspace{3pt}
+\Project{Will My Flight Be Delayed?}{https://kennedyjohnson.github.io/will-my-flight-be-delayed/}{2026}
+\begin{itemize}
+  \item Trained a LightGBM model on 7M US flights that catches 73\% of 15+ minute arrival delays (vs.\ 62\% from on-time history alone), served with a route map and live weather
+\end{itemize}
+\vspace{3pt}
+\Project{Twin Cities Living Quality Map}{https://twin-cities-living-quality-map.ken-j.workers.dev/}{2026}
+\begin{itemize}
+  \item Combined data from 6 public sources (city, Census, CDC, MnDOT, OSM) into a weighted score for each neighborhood, shown on a Next.js map with address search and trends
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPart{Education}
+
+\Org{Georgia Institute of Technology}{Fall 2026 -- Fall 2028 (expected)}
+\textit{M.S. in Analytics, Computational Data Analytics track}\par
+\vspace{3pt}
+\Org{University of Minnesota -- Twin Cities}{Fall 2021 -- Fall 2024}
+\textit{B.S. in Data Science} \hfill GPA: 3.7\par
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPart{Technical Skills}
+
+\begin{tabular}{@{}l l@{}}
+  \textbf{Languages}    & Python, SQL \\
+  \textbf{ML \& Data}   & scikit-learn, PySpark, Pandas, NumPy, RAG / Vector Search, Databricks Agent Framework \\
+  \textbf{Platforms}    & Databricks (Unity Catalog, Jobs, Apps), Snowflake, AWS (Lambda, EventBridge, SNS, S3, IAM) \\
+  \textbf{Tools \& Web} & Git/GitHub, GitHub Actions, Next.js, Streamlit \\
+\end{tabular}
+
+\end{document}
