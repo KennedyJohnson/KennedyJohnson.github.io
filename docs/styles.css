@@ -42,7 +42,7 @@ body{
 }
 
 .nav{
-  margin-left:auto;
+  margin:0 auto;
   display:flex;
   align-items:center;
   justify-content:center;
