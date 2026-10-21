@@ -18,7 +18,9 @@ jobs:
         with:
           python-version: "3.14"
       - name: Sites up and data fresh
-        run: python .github/scripts/health.py
+        run: |
+          pip install -q certifi
+          python .github/scripts/health.py
       - name: Broken links on the portfolio
         if: always()
         uses: lycheeverse/lychee-action@v2

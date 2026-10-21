@@ -1,8 +1,14 @@
 """Weekly check that every live project is up and its data is fresh. Exits 1 with a report if not."""
 import json
+import ssl
 import sys
 import urllib.request
 from datetime import datetime, timezone
+
+import certifi
+
+# Use certifi's CA list: on Windows the stdlib default also trusts the OS root store, which Python reads without honoring its blocklist.
+TLS = ssl.create_default_context(cafile=certifi.where())
 
 GH = "https://kennedyjohnson.github.io"
 # (name, url that must load, freshness json url or None, json key holding a date, max age in days)
@@ -27,7 +33,7 @@ CHECKS = [
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "portfolio-health-check"})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with urllib.request.urlopen(req, timeout=60, context=TLS) as r:
         return r.read()
 
 
