@@ -31,6 +31,7 @@ if body.get("errors"):
     raise SystemExit(f"Cloudflare API error: {body['errors']}")
 groups = body["data"]["viewer"]["accounts"][0]["rumPageloadEventsAdaptiveGroups"]
 g = groups[0] if groups else {"count": 0, "sum": {"visits": 0}}
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, "w") as f:
     json.dump({"page_views": g["count"], "visits": g["sum"]["visits"],
                "days": 7, "updated": end.date().isoformat()}, f, indent=2)
