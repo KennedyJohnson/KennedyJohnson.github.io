@@ -565,3 +565,5 @@ img.card-img{display:block;height:auto!important;aspect-ratio:auto!important;obj
 .card .sub .sub-media:has(img){aspect-ratio:auto;overflow:visible}
 /* wide two-panel screenshots: stack text above, show the full image */
 .card .sub .sub-media img.sub-img{position:static;display:block;width:100%;max-width:700px;height:auto;margin:0 auto;aspect-ratio:auto;object-fit:fill;object-position:top center;border-radius:8px;border:1px solid rgba(128,128,128,.25)!important}
+
+.card p.stat{font-family:"Newsreader",serif;font-style:italic;font-size:.95rem;opacity:.8;margin:-.5rem 0 1rem}
