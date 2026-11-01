@@ -26,7 +26,6 @@ CHECKS = [
      "https://gopher-x-metro.github.io/data/last_updated.json", "updated", 14),
     ("Metro Transit Delays", f"{GH}/metro-transit-delays/",
      f"{GH}/metro-transit-delays/data/meta.json", "updated", 3),
-    ("Social Media Analysis", f"{GH}/social-media-analysis/", None, None, None),
     ("Creekside", f"{GH}/creekside/", None, None, None),
 ]
 
