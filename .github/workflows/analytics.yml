@@ -24,3 +24,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/analytics.json
           git diff --staged --quiet || (git commit -m "Update analytics" && git push)
+
+  # GitHub disables scheduled workflows after 60 days without repo activity.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      # Re-enabling the workflow resets GitHub's 60-day inactivity timer.
+      - run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/analytics.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
