@@ -567,3 +567,9 @@ img.card-img{display:block;height:auto!important;aspect-ratio:auto!important;obj
 .card .sub .sub-media img.sub-img{position:static;display:block;width:100%;max-width:700px;height:auto;margin:0 auto;aspect-ratio:auto;object-fit:fill;object-position:top center;border-radius:8px;border:1px solid rgba(128,128,128,.25)!important}
 
 .card p.stat{font-family:"Newsreader",serif;font-style:italic;font-size:.95rem;opacity:.8;margin:-.5rem 0 1rem}
+
+/* UI baseline: keyboard focus, reduced motion, text wrapping */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
